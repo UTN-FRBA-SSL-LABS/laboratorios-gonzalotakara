@@ -277,7 +277,7 @@ Los tests de `IsEmpty` ya están activos en `StringTest.c`. Corré `make test` y
 
 **P1** — `IsEmpty` podría haberse escrito también como `return s[0] == '\0'`. ¿Son equivalentes? ¿Por qué?
 
-> R:
+> R:si, porque para hacer una consulta ambos tienen el mismo fin. *s pide el valor de lo que referencia s y s[0] pide pasar el primer valor desde la posicion de s
 
 ---
 
@@ -328,11 +328,11 @@ make test
 
 **P2** — ¿Qué hace `s + 1`? ¿Por qué avanza al siguiente carácter y no al siguiente byte?
 
-> R:
+> R:s + 1 lo que hace es pasar a la siguiente posicion a la que se referenciaba s. Avanza al siguiente caracter porque al ser s de tipo char y al ser un puntero, en aritmetica de punteros hacer +1 es pasar a la siguiente posicion del tipo de dato
 
 **P3** — Si llamaras a `GetLength(NULL)`, ¿qué pasaría? ¿Por qué las precondiciones del contrato dicen `s != NULL`?
 
-> R:
+> R: Da error. Porque en la definicion de "isEmpty" pide que s[0] == ´\0´ e ir a la posicion s[NULL] el lugar esta restringido, por lo que el programa se interrumpe
 
 ```
 GETLENGTH_PASA=
@@ -367,7 +367,7 @@ El `while` termina cuando alguna de las dos cadenas llega a `'\0'`. Después dev
 
 **P4** — ¿Qué dos casos están mal cubiertos por `return 1`? Describí un ejemplo para cada uno.
 
-> R:
+> R:un caso seria que una cadena sea mas corta que la otra y que la corta coincida con todas las de la larga. Ejemplo: pelota y pelotas de playa. Para cuando termina pelota, s1 esta vacio, por lo que no sigue leyendo y llega a la conclusion de que pelota y pelotas de playa son lo mismo. El segundo caso seria por pasar NULL y daria como error un segmantation fault
 
 #### Corrección
 
