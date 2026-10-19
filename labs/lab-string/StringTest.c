@@ -33,11 +33,11 @@ int main(void) {
     assert(AreEqual("ab", "abc") == 0);
     
     /* ── AreDecimalDigits — tiene un bug, estos tests ya estan activos ───── */
-    /*assert(AreDecimalDigits("0") == 1);
+    assert(AreDecimalDigits("0") == 1);
     assert(AreDecimalDigits("123") == 1);
     assert(AreDecimalDigits("12a") == 0);
     assert(AreDecimalDigits("") == 0);
-    */
+    
     /* ── Contains — descomentar cuando implementes la funcion ───────────── */
     /* assert(Contains("hola", 'o') == 1); */
     /* assert(Contains("hola", 'z') == 0); */

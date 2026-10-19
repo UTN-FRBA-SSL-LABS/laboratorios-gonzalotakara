@@ -335,7 +335,7 @@ make test
 > R: Da error. Porque en la definicion de "isEmpty" pide que s[0] == ´\0´ e ir a la posicion s[NULL] el lugar esta restringido, por lo que el programa se interrumpe
 
 ```
-GETLENGTH_PASA=
+GETLENGTH_PASA=Si
 ```
 _(escribí SI cuando todos los tests de GetLength pasen)_
 
@@ -384,7 +384,7 @@ make test
 ```
 
 ```
-AREEQUAL_PASA=
+AREEQUAL_PASA=Si
 ```
 _(escribí SI cuando todos los tests de AreEqual pasen)_
 
@@ -414,7 +414,7 @@ int AreDecimalDigits(const char *s) {
 
 **P5** — ¿Por qué la cadena vacía no debería considerarse un conjunto de dígitos decimales? Pensalo desde la especificación matemática.
 
-> R:
+> R: Porque el vacio no es un numero
 
 #### Corrección
 
@@ -425,7 +425,7 @@ make test
 ```
 
 ```
-AREDECIMALDIGITS_PASA=
+AREDECIMALDIGITS_PASA=Si
 ```
 _(escribí SI cuando todos los tests de AreDecimalDigits pasen)_
 
