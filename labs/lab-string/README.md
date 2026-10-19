@@ -636,7 +636,7 @@ make todosiguales
 ```
 
 ```
-TODOSIGUALES_PASA=
+TODOSIGUALES_PASA=Si
 ```
 _(SI o NO)_
 

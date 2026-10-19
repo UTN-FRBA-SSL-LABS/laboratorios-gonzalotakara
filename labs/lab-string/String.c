@@ -49,6 +49,7 @@ int AreDecimalDigits(const char *s) {
 /* ── Contains — implementar completo ────────────────────────────────────── */
 
 int Contains(const char *s, char c) {
+    (void)s; (void)c;
     if (IsEmpty(s)) return 0;
     int i = 0;
     while(s[i] != '\0'){
