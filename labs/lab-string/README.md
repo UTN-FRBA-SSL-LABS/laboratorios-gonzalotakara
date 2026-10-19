@@ -452,7 +452,7 @@ make test
 ```
 
 ```
-CONTAINS_PASA=
+CONTAINS_PASA=Si
 ```
 _(escribí SI cuando todos los tests de Contains pasen)_
 
@@ -467,7 +467,7 @@ Antes de implementar, discutí con tu equipo:
 
 **P6** — Conclusión de la discusión:
 
-> R:
+> R:No, porque la biblioteca de string seria mas para poder usar los datos como palabras. Convertir palabras (que esas palabras pueden ser numeros, solo que escritos y no como valor) en otro dato le conviene mas a Conversion
 
 ---
 
@@ -494,7 +494,7 @@ int ToInteger(const char *s) {
 
 **P7** — El loop acumula correctamente el valor en `resultado`. ¿Qué está mal en el `return`?
 
-> R:
+> R: que esta devolviendo el signo del numero, pero no el numero
 
 #### Corrección
 
@@ -506,10 +506,10 @@ make test
 
 **P8** — La expresión `*s - '0'` convierte un carácter dígito al entero correspondiente. ¿Por qué funciona? ¿Qué devuelve `'3' - '0'`?
 
-> R:
+> R:Porque lo que esta pasando es el valor de numerico de *s. Al restar '3' - '0', en ASCII '0' no esta en 0, esta en 48 y el resto de los digitos es la suma de ello. Entonces '3' se encuentra en la tabla ASCII en 51
 
 ```
-TOINTEGER_PASA=
+TOINTEGER_PASA=Si
 ```
 _(escribí SI cuando todos los tests de ToInteger pasen)_
 
