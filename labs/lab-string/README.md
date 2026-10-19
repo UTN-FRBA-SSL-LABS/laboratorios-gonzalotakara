@@ -562,7 +562,8 @@ foo
 
 **P9** — ¿Por qué `(void)argc` suprime un warning? ¿Cuándo sería necesario usar `argc`?
 
-> R:
+> R:Porque enlineas argc no se utiliza como tal, pero con el (void)argc se le indica al compilador de que se sabe de su existencia.
+argc se utiliza para validar argumentos obligatorios, casos donde sabes cuantos parametros necesitas y pones un numero minimo de parametros para dejar pasar. Por si queres usar un bucle indexado (for (int i = 1; i < argc; i++)), en vez de iterar con un puntero hasta llegar a un NULL. Tambien por si queres optimizar memoria, reservas memoria con estructuras basadas en la cantidad exacta de argumentos recibidos
 
 ---
 
@@ -589,7 +590,7 @@ Salida esperada:
 ```
 
 ```
-LONGITUDES_PASA=
+LONGITUDES_PASA=Si
 ```
 _(SI o NO)_
 
